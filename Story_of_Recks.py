@@ -1334,62 +1334,9 @@ while True:
         input()
         break
 tprint("對了，冒昧請問一下，\n")
-while True:
-    tprint("請問{}的職業是？　　\n\n".format(myname))
-    tprint("{}(Z)\n".format(PT.NM.rl1))
-    tprint("{}(X)\n".format(PT.NM.rl2))
-    tprint("{}(C)\n".format(PT.NM.rl3))
-    tprint("職業說明(Q)\n")
-    print(tcolors.yelB, end='')
-    tprint("請輸入欲執行的動作："), print(tcolors.res, end='')
-    ans=input()
-    if ans=="Z" or ans=="z":
-        tprint("\n{}的職業是 {}，對嗎？\n".format(myname, PT.NM.rl1))
-        print(tcolors.yelB, end='')
-        tprint("請選擇確認(Enter)或取消(N)："), print(tcolors.res, end='')
-        ans=input()
-        if ans=="N" or ans=="n":
-            continue
-        else:
-            my_who="rl1"
-            tprint("原來是 {}阿！　　".format(PT.NM.rl1))
-            print(texts.enter)
-            input()
-            break
-    elif ans=="X" or ans=="x":
-        tprint("\n{}的職業是 {}，對嗎？\n".format(myname, PT.NM.rl2))
-        print(tcolors.yelB, end='')
-        tprint("請選擇確認(Enter)或取消(N)："), print(tcolors.res, end='')
-        ans=input()
-        if ans=="N" or ans=="n":
-            continue
-        else:
-            my_who="rl2"
-            tprint("原來是 {}阿！　　".format(PT.NM.rl2))
-            print(texts.enter)
-            input()
-            break    
-    elif ans=="C" or ans=="c":
-        tprint("\n{}的職業是 {}，對嗎？\n".format(myname, PT.NM.rl3))
-        print(tcolors.yelB, end='')
-        tprint("請選擇確認(Enter)或取消(N)："), print(tcolors.res, end='')
-        ans=input()
-        if ans=="N" or ans=="n":
-            continue
-        else:
-            my_who="rl3"
-            tprint("原來是 {}阿！　　".format(PT.NM.rl3))
-            print(texts.enter)
-            input()
-            break    
-    elif ans=="Q" or ans=="q":
-        texts.rl_exp()
-        print(texts.enter)
-        input()
-        continue
-    else:
-        tprint("\n無法辨識的動作，請重新輸入。\n")
-        continue
+
+GN.LifeChange()
+
 tprint("噢，你可別擔心，在您任務失敗被送回城市急救時，\n")
 tprint("您隨時可以透過"), print(tcolors.yelB, end=''), tprint("轉生器"), print(tcolors.res, end=''), tprint("再次轉職。　　")
 print(texts.enter)
